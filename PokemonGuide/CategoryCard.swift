@@ -8,11 +8,33 @@
 import SwiftUI
 
 struct CategoryCard: View {
+    
+    var category: Category
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+       
+        ZStack {
+            
+            Rectangle()
+                .fill(Color.gray)
+                .opacity(0.1)
+            
+            HStack {
+                
+                Image(category.imageName)
+                Text(category.categoryType)
+                    
+                
+                
+            }
+        }
+            
+        
+        
+        
     }
 }
 
 #Preview {
-    CategoryCard()
+    CategoryCard(category: Category(imageName: "pikachu", categoryName: "elektric", categoryColor: "test", categoryType: "type", pokemons: [Pokemon]()))
 }

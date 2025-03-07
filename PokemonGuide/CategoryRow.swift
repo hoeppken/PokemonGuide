@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct CategoryView: View {
+struct CategoryRow: View {
     
-    @State var pokemon = [Pokemon]()
+    @State var categories = [Pokemon]()
     var dataService = DataService()
     
     var body: some View {
@@ -19,12 +19,12 @@ struct CategoryView: View {
             ScrollView (showsIndicators: false){
                 
                 VStack {
-                    ForEach(pokemon) { poke in
+                    ForEach(categories) { cat in
                         
                         NavigationLink {
-                            PokemonView(poke:poke)
+                            CategoryCard(cat:cat)
                         } label: {
-                            CategoryCard(poke: poke).padding(.bottom, 20)
+                            CategoryGroup(cat: cat).padding(.bottom, 20)
                         }
 
                         
@@ -37,12 +37,12 @@ struct CategoryView: View {
         
         
         .onAppear {
-            pokemon = dataService.getFileData()
+            categories = dataService.getFileData()
             
         }
     }
 }
 
 #Preview {
-    CategoryView()
+    CategoryRow()
 }

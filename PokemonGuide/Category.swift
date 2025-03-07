@@ -13,6 +13,9 @@ struct Category: Identifiable, Decodable {
     var imageName: String
     var categoryName: String
     var categoryColor: String
+    var categoryType : String
+    
+    var pokemons : [Pokemon] 
     
     
     
