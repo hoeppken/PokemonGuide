@@ -10,14 +10,9 @@ import Foundation
 struct Category: Identifiable, Decodable {
     
     let id = UUID()
-    var imageName: String
-    var categoryName: String
+    var type : String
+    var categoryImage: String
     var categoryColor: String
-    var categoryType : String
-    
-    var pokemons : [Pokemon] 
-    
-    
     
 }
 //var pokemons: [Pokemon] 

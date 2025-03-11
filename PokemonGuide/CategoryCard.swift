@@ -16,13 +16,14 @@ struct CategoryCard: View {
         ZStack {
             
             Rectangle()
-                .fill(Color.gray)
+                .fill(.blue)
                 .opacity(0.1)
+                .frame(width: 200, height: 100)
             
             HStack {
                 
-                Image(category.imageName)
-                Text(category.categoryType)
+                Image(category.categoryImage)
+                Text(category.type)
                     
                 
                 
@@ -36,5 +37,6 @@ struct CategoryCard: View {
 }
 
 #Preview {
-    CategoryCard(category: Category(imageName: "pikachu", categoryName: "elektric", categoryColor: "test", categoryType: "type", pokemons: [Pokemon]()))
+    CategoryCard(category: Category(type: "Electric", categoryImage: String("bolt.circle"), categoryColor:String()))
+    
 }
