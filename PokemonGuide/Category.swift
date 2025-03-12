@@ -11,8 +11,7 @@ struct Category: Identifiable, Decodable {
     
     let id = UUID()
     var type : String
-    var categoryImage: String
-    var categoryColor: String
+    var pokemon: [Pokemon]
     
 }
-//var pokemons: [Pokemon] 
+

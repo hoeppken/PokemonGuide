@@ -53,8 +53,8 @@ struct DataService {
     
     func getCategory() -> [Category] {
         
-        return [Category(type: "Electric", categoryImage: String("bolt.circle"), categoryColor: ".blue"),
-                Category(type: "Grass", categoryImage: String("bolt.circle"), categoryColor: ".yellow")]
+        return [Category(type: "Electric", pokemon: <#[Pokemon]#>, categoryImage: String("bolt.circle"), categoryColor: ".blue"),
+                Category(type: "Grass", pokemon: <#[Pokemon]#>, categoryImage: String("bolt.circle"), categoryColor: ".yellow")]
         
     }
 }
