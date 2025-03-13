@@ -8,9 +8,10 @@
 import Foundation
 
 struct DataService {
-    func getFileData() -> [Pokemon] {
+    
+    func getFileData() -> [Category] {
         
-        // Get the file path to DemoData.json
+        // Get the file path to data.json
         
         if let url =  Bundle.main.url(forResource: "data", withExtension: "json") {
             
@@ -26,8 +27,8 @@ struct DataService {
                 
                 
                 do {
-                    let pokemons = try decoder.decode([Pokemon].self, from: data)
-                    return pokemons
+                    let categories = try decoder.decode([Category].self, from: data)
+                    return categories
                 }
                 catch {
                     print("Could not parse JSON: \(error)")
@@ -44,21 +45,12 @@ struct DataService {
             
             
         }
-        return [Pokemon]()
-       
+        return [Category]()
         
         
         
     }
     
-    func getCategory() -> [Category] {
-        
-        return [Category(type: "Electric", pokemon: <#[Pokemon]#>, categoryImage: String("bolt.circle"), categoryColor: ".blue"),
-                Category(type: "Grass", pokemon: <#[Pokemon]#>, categoryImage: String("bolt.circle"), categoryColor: ".yellow")]
-        
-    }
 }
-
-
 
 

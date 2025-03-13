@@ -24,18 +24,18 @@ struct ContentView: View {
                         
                         NavigationLink {
                             
-                            PokemonListView(categorie: cat)
+                            PokemonListView(category: cat)
                         } label: {
                             
                             ZStack{
                                 RoundedRectangle(cornerRadius: 10).foregroundColor(getCategoryColor(category: cat.type))
-                                
+                                HStack {
+                                    
+                                    Image(systemName: getCategorieIcon(category: cat.type))
+                                    Text(cat.type).bold()
+                                }.foregroundStyle(.black).padding(.vertical)
                             }
-                            HStack {
-                                
-                                Image(systemName: getCategorieIcon(category: cat.type))
-                                Text(cat.type).bold()
-                            }.foregroundStyle(.black).padding(.vertical)
+                            
                             
                         }
                         
@@ -47,7 +47,7 @@ struct ContentView: View {
             }.navigationTitle(Text("Categories"))
             
         }.onAppear {
-            self.categories = DataService.getFileData()
+            self.categories = DataService().getFileData()
         }
        
         

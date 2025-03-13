@@ -8,11 +8,42 @@
 import SwiftUI
 
 struct PokemonDetailView: View {
+    
+    var pokemon: Pokemon
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        VStack (alignment: .leading) {
+            
+            HStack (alignment:.top) {
+                Image(pokemon.image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 200)
+                
+                VStack (alignment: .leading) {
+                    Text("Stats")
+                        .bold()
+                        .padding(.bottom, 20)
+                    Text("HP: \(pokemon.hp)")
+                    Text("Attack: \(pokemon.atk)")
+                    Text("Defense: \(pokemon.def)")
+                    Text("Special Attack: \(pokemon.spatk)")
+                    Text("Special Defense: \(pokemon.spdef)")
+                    Text("Speed: \(pokemon.spd)")
+                }
+            }
+                
+            Text(pokemon.about)
+            
+            Spacer()
+        }
+        .padding(.horizontal)
+        .navigationTitle(pokemon.name)
+        
     }
 }
 
-#Preview {
-    PokemonDetailView()
-}
+//#Preview {
+  //  PokemonDetailView()
+//}

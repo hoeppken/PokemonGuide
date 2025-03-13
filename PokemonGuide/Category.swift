@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct Category: Identifiable, Decodable {
+struct Category:  Decodable, Identifiable {
     
     let id = UUID()
     var type : String
-    var pokemon: [Pokemon]
+    var pokemon : [Pokemon]
     
 }
 

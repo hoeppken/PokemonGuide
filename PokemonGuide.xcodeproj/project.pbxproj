@@ -34,8 +34,16 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				data.json,
+				DataService.swift,
 			);
 			target = CEC707DB2D77A3A600942A53 /* PokemonGuide */;
+		};
+		CEC708E42D8380E700942A53 /* Exceptions for "PokemonGuideUITests" folder in "PokemonGuideUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DataService.swift,
+			);
+			target = CEC707F52D77A3A700942A53 /* PokemonGuideUITests */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -54,6 +62,7 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				CEC708162D77A5B500942A53 /* Exceptions for "PokemonGuideUITests" folder in "PokemonGuide" target */,
+				CEC708E42D8380E700942A53 /* Exceptions for "PokemonGuideUITests" folder in "PokemonGuideUITests" target */,
 			);
 			path = PokemonGuideUITests;
 			sourceTree = "<group>";

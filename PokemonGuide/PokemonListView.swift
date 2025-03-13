@@ -12,12 +12,13 @@ struct PokemonListView: View {
     var category : Category
     
     var body: some View {
+        
         ScrollView (showsIndicators: false){
             
             LazyVGrid (columns: [GridItem(),GridItem()], spacing:20){
                 
                 ForEach (category.pokemon) { poke in
-                    
+                
                     NavigationLink {
                         PokemonDetailView(pokemon: poke)
                     } label: {
@@ -36,9 +37,9 @@ struct PokemonListView: View {
     }
 }
 
-#Preview {
-    PokemonListView()
-}
+//#Preview {
+  //  PokemonListView()
+//}
 
 
 //1. Declare a var to store the value of the category
